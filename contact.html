@@ -18,7 +18,127 @@
 </ul>
 </header>
 <div id="content">
-<h2>Contact Arrow Photography</h2>
+    <p><img src="assets/images/ArrowPhotograhyFrontPage4.jpg" alt="Wedding Photo"/></p>
+      <h2>Contact Arrow Photography</h2>
+          <table border="1">
+              <caption>Class contact details</caption>
+            <thead>
+             <tr>
+                 <th scope="col">Name:</th>
+                 <th scope="col">Gender:</th>
+                 <th scope="col">Email:</th>
+                 <th scope="col">Mood:</th>
+            </tr>
+            </thead>
+            <tfoot>
+                      <tr>
+                          <td colspan="4">All information provided is private &amp; confidential.</td>
+                      </tr>
+                    </tfoot>
+            <tbody>
+                             <tr>
+                                 <th scope="row">Paul</th>
+                                 <td rowspan="5">Male</td>
+                                 <td>paul@here.com</td>
+                                 <td>Happy</td>
+                            </tr>
+                             <tr>
+                                 <th scope="row">Chris</th>
+
+                                 <td>chris@here.com</td>
+                                 <td>Happy</td>
+                            </tr>
+                             <tr>
+                                 <th scope="row">Charles</th>
+
+                                 <td>charles@here.com</td>
+                                 <td>Happy</td>
+                            </tr>
+                             <tr>
+                                 <th scope="row">Daniel</th>
+
+                                 <td>daniel@here.com</td>
+                                 <td>Happy</td>
+                            </tr>
+                             <tr>
+                                  <th scope="row">Guy</th>
+
+                                  <td>guy@here.com</td>
+                                  <td>Happy</td>
+                              </tr>
+                             <tr>
+                                  <th scope="row">Emelie</th>
+                                  <td rowspan="5">Female</td>
+                                  <td>emelie@here.com</td>
+                                  <td>Happy</td>
+                              </tr>
+                             <tr>
+                                  <th scope="row">Jess</th>
+
+                                  <td>jess@here.com</td>
+                                  <td>Happy</td>
+                              </tr>
+                             <tr>
+                                  <th scope="row">Madonna</th>
+
+                                  <td>madonna@here.com</td>
+                                  <td>Happy</td>
+                              </tr>
+                             <tr>
+                                  <th scope="row">Louisia</th>
+
+                                  <td>louisia@here.com</td>
+                                  <td>Happy</td>
+                              </tr>
+                             <tr>
+                                  <th scope="row">Kat</th>
+
+                                  <td>kat@here.com</td>
+                                  <td>Happy</td>
+                              </tr>
+                            </tbody>
+
+          </table>
+
+
+    <form method="post" action="http://webdesignstudents.co.uk/students/response.php">
+        <table>
+        <tr><td><label for="contactname" >Name: </label></td> <td><input type="text" name="contactname" id="contactname" required/></td></tr>
+        <tr><td><label for="contactemail">Email:</label></td><td><input type="email" name="contactemail" id="contactemail" required/></td></tr>
+
+        <tr><td>Gender:</td>
+        <td>
+            <label>
+                <input type="radio" name="gender" value="male" id="gender"/> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female" checked/> Female
+            </label>
+        </td>
+        </tr>
+        <tr><td><label for="location">Location: </label></td>
+            <td>
+            <select name="location" id="location">
+                <option value="Brighton">Brighton &amp; Hove</option>
+                <option value="Worthing">Worthing</option>
+                <option value="Southampton">Southampton</option>
+                <option value="Eastbourne">Eastbourne</option>
+            </select>
+            </td>
+        </tr>
+        <tr><td><label for="comment">Comment:</label></td>
+            <td><textarea name="comment" id="comment" cols="18" rows="8" required></textarea></td>
+        </tr>
+        <tr>
+            <!-- <td>&nbsp;</td> -->
+            <td colspan="2">
+            <input type="submit" name="submit" value="Send Comment" />
+            </td>
+        </tr>
+        </table>
+    </form>
+
+
 </div>
 <footer>
 <ul class="nav">
