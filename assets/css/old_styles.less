@@ -1,0 +1,41 @@
+@import 'normalize.css';
+
+@page: 960px;
+@basecolor: #336699;
+@lightcolor: lighten(@basecolor, 25%);
+@darkcolor: darken(@basecolor, 25%);
+
+.gradient (@light,@dark){
+  -webkit-background-image: linear-gradient(@light,@dark);
+  -moz-background-image: linear-gradient(@light,@dark);
+  -ms-background-image: linear-gradient(@light,@dark);
+  -o-background-image: linear-gradient(@light,@dark);
+  background-image: linear-gradient(@light,@dark);
+}
+
+header{
+  .gradient(#CCCC00, #FF6666);
+  h1{
+    color: @basecolor;
+  }
+  nav{
+    .gradient(@lightcolor,@darkcolor);
+    ul{
+      height: 24px;
+      li{
+        width: @page/6;
+        float: left;
+        a{
+          color: @darkcolor;
+          text-decoration: none;
+          padding: 4px 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+body{
+  background-color: @lightcolor;
+}

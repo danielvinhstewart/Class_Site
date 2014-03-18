@@ -1,146 +1,151 @@
 @import 'normalize.css';
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 /* Variables and mixins */
-body {
-  font: 14px/1.5 'Open Sans', sans-serif;
-  color: #663333;
+@basecolor: #663333;
+body{
+  font: 14px/1.5 'Open Sans',sans-serif;
+  color: @basecolor;
   width: 100%;
   margin: 0 auto;
-
-
+  img{
+    width: 100%;
+    max-width: 960px;
+    min-width: 290px;
+  }
 }
-body img {
-  width: 100%;
-  max-width: 960px;
-  min-width: 290px;
 
-
-
-}
-h1,
-h2,
-h3 {
+h1,h2,h3{
   font-weight: 600;
 }
-h5 {
+
+h5{
   font-weight: 300;
   font-size: smaller;
   text-align: center;
   margin: 15px 0 0 0;
 }
-header {
-  background-color: #663333;
+
+header{
+  background-color: @basecolor;
+  h1{
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    background-color: #FFFFFF;
+  }
+  nav{
+    li{
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+      a{
+        display: block;
+        padding: 6px 0;
+        background-color: @basecolor;
+        color: lighten(@basecolor, 40%);
+        text-decoration: none;
+        margin: 5px 0;
+      }
+    }
+  }
 }
-header h1 {
-  font-size: 24px;
-  padding: 20px;
-  text-align: center;
-  font-weight: 300;
-  background-color: #FFFFFF;
-}
-header nav li {
-  width: 100%;
-  text-align: center;
-  margin: 5px 0;
-}
-header nav li a {
-  display: block;
-  padding: 6px 0;
-  background-color: #663333;
-  color: #cc9999;
-  text-decoration: none;
-  margin: 5px 0;
-}
-section {
+section{
   clear: both;
-}
-section h2 {
-  font-size: 24px;
-  padding: 24px 0;
-}
-section p img {
-  width: 100%;
-}
-section.second p {
+  h2{
+    font-size: 24px;
+    padding: 24px 0;
+  }
+  p img{
+    width: 100%;
+  }
+  &.second p{
   margin: 24px 16px;
+  a{
+    color: lighten(@basecolor, 20%);
+    text-decoration: none;
+    font-weight: 600;
+    }
+  }
 }
-section.second p a {
-  color: #aa5555;
-  text-decoration: none;
-  font-weight: 600;
-}
-footer {
+footer{
   clear: both;
+  li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    a{
+      display: block;
+      padding: 6px 0;
+      background-color:@basecolor;
+      color: lighten(@basecolor, 40%);
+      text-decoration: none;
+    }
+  }
 }
-footer li {
-  width: 50%;
-  float: left;
-  text-align: center;
-}
-footer li a {
-  display: block;
-  padding: 6px 0;
-  background-color: #663333;
-  color: #cc9999;
-  text-decoration: none;
-}
-@media (min-device-width: 481px) {
-  body {
+@media(min-device-width: 481px){
+  body{
     font-size: 16px;
     width: 750px;
   }
-  header {
+  header{
     clear: both;
+    h1{
+      width: 290px;
+      float: left;
+      padding: 34px 20px;
+    }
+    nav{
+      width: 420px;
+      float: right;
+      li{
+        width: 140px;
+        float: left;
+        a{
+          padding: 14px 0;
+        }
+      }
+    }
   }
-  header h1 {
-    width: 290px;
-    float: left;
-    padding: 34px 20px;
-  }
-  header nav {
-    width: 420px;
-    float: right;
-  }
-  header nav li {
-    width: 140px;
-    float: left;
-  }
-  header nav li a {
-    padding: 14px 0;
-  }
-  section {
+  section{
     clear: both;
-  }
-  section.second p {
-    width: 290px;
-    float: left;
-  }
-  section.second p + p {
-    float: right;
-  }
-  section div {
-    clear: both;
+    &.second p{
+      width: 290px;
+      float: left;
+    }
+    &.second p+p{
+      float: right;
+    }
+    div{
+      clear: both;
+    }
   }
 }
-@media (min-device-width: 960px) {
-  body {
+
+@media(min-device-width: 960px){
+  body{
     width: 960px;
   }
-  header h1 {
-    width: 290px;
-    padding: 8px 20px;
-    text-align: left;
+  header{
+    h1{
+      width: 290px;
+      padding: 8px 20px;
+      text-align: left;
+    }
+    nav{
+      width: 630px;
+      li{
+        width: 105px;
+      }
+    }
   }
-  header nav {
-    width: 630px;
-  }
-  header nav li {
-    width: 105px;
-  }
-  section.second p + p {
-    width: 606px;
+  section{
+    &.second p+p{
+      width: 606px;
+    }
   }
 }
+
 /*
     ul{
      height: 36px;

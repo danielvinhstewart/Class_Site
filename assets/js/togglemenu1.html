@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Toggle Menu One</title>
+    <script>
+        function hideItems(currClass){
+            currItem = document.getElementsByTagName(currClass)
+            for(i=0;i<currItem.length;i++){
+                if(currItem[i].className == 'subMenu'){
+                    currItem[i].style.display = 'none';
+                }
+            }
+        }
+        var oldMenu = null;
+        function toggleMenu(menuId){
+            currMenu = document.getElementById(menuId);
+            if(currMenu.style.display == 'block'){
+                currMenu.style.display = 'none';
+            }else{
+                if(oldMenu){
+                    oldMenu.style.display = 'none';
+                }
+            if(oldMenu){
+                oldMenu.style.display = 'none';
+            }
+            currMenu.style.display = 'block';
+            oldMenu = currMenu;
+        }
+            return false;
+    }
+    </script>
+</head>
+<body onload="hideItems('ul'), toggleMenu('top')">
+
+
+<h1>Toggle Menu One</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Menu One</a></li>
+                <li><a href="#" onclick="return toggleMenu('top')">Menu Two</a>
+                    <ul class="subMenu" id="top">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Three</a></li>
+                <li><a href="#" onclick="return toggleMenu('bottom')">Menu Four</a>
+                    <ul class="subMenu" id="bottom">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    <h2>Content Starts Here</h2>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus odio,
+suscipit quis scelerisque at, rhoncus vel eros. Nullam scelerisque magna et
+justo imperdiet sagittis. Nam euismod ut nibh non rutrum. Mauris magna enim,
+venenatis vel neque in, accumsan fringilla lacus. Integer lacinia, lacus a
+fringilla placerat, purus est vulputate nisi, a accumsan nisl dolor et
+turpis. Aenean in est id lorem elementum aliquet. Vestibulum ultrices risus
+quam. In lacus elit, pharetra vel massa vel, aliquet faucibus tortor.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae;
+
+<h2>More Information</h2>
+
+<footer onload="hideItems('div')">
+    <div class="subMenu">
+        <nav>
+            <ul>
+                <li><a href="#">Menu One</a></li>
+                <li><a href="#" onclick="return toggleMenu('top 1')">Menu Two</a>
+                    <ul class="subMenu" id="top 1">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu Three</a></li>
+                <li><a href="#" onclick="return toggleMenu('bottom 1')">Menu Four</a>
+                    <ul class="subMenu" id="bottom 1">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+</footer>
+
+</body>
+</html>
