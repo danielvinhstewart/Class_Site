@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Coffee Testing Page</title>
+    <script src="../js/test.js"></script>
+</head>
+<body onload="hideItems('ul'), toggleItem('one')">
+<header>
+    <h1>Plugin Testing Page</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#" onclick="return toggleItem('one')">Menu 2</a></li>
+                <ul class="subMenu" id="one">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#" onclick="return toggleItem('two')">Menu 4</a></li>
+                <ul class="subMenu" id="two">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            <li><a href="#">Menu 5</a></li>
+        </ul>
+    </nav>
+</header
+</body>
+</html>

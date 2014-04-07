@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8"/>
+    <title>JavaScript Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="modernizr.custom.23575.js"></script>
+    <style>
+        body{
+            width: 760px;
+            position: relative;
+            margin: 0 auto;
+        }
+        p img{
+            width: 100%;
+        }
+        .thumbnail{
+            width: 100px;
+        }
+        .preview{
+            width: 300px;
+            position: absolute;
+            top: 250px;
+            left: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="page" class="container">
+    <header>
+        <h1>Example JavaScript Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../../packages/index.html">Packages</a></li>
+                <li><a href="../../news.html">News</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content" class="container">
+        <h2>Adele and John's Gallery - Click thumbnail to view</h2>
+        <p class="thumbnail"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding1.jpg" alt="Adele and John's Wedding 1 thumbnail"/></a></p>
+        <p class="preview" id="gallone"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding1.jpg" alt="Adele and John's Wedding 1 preview"/></a></p>
+        <p class="thumbnail"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="Adele and John's Wedding 2 thumbnail"/></a></p>
+        <p class="preview" id="galltwo"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding2.jpg" alt="Adele and John's Wedding 2 preview"/></a></p>
+        <p class="thumbnail"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="Adele and John's Wedding 3 thumbnail"/></a></p>
+        <p class="preview" id="gallthree"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding3.jpg" alt="Adele and John's Wedding 3 preview"/></a></p>
+        <p class="thumbnail"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding4.jpg" alt="Adele and John's Wedding 4 thumbnail"/></a></p>
+        <p class="preview" id="gallfour"><a href="#"><img src="../../portfolio/weddings/AdeleandJohn/images/AdeleandJohnWedding4.jpg" alt="Adele and John's Wedding 4 preview"/></a></p>
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="../../general/terms.html">Terms &amp; Conditions</a></li>
+                <li><abbr title="Frequently Asked Questions"><a href="../../general/faq.html">FAQ</a></abbr></li>
+            </ul>
+        </nav>
+        <p>
+            &copy;2000 - 2014 Arrow Photography. All rights reserved.
+        </p>
+    </footer>
+</div>
+<script src="min/jquery-1.11.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.preview:not(:first)').hide();
+        $('p.thumbnail a').click(function(){
+            $('p.preview').fadeOut(500);
+            $(this).parent().next().slideDown(750);
+        })
+    })
+</script>
+</body>
+</html>

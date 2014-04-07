@@ -12,10 +12,6 @@ body {
 body img {
   width: 100%;
   max-width: 960px;
-  min-width: 290px;
-
-
-
 }
 h1,
 h2,
@@ -30,6 +26,10 @@ h5 {
 }
 header {
   background-color: #663333;
+}
+header ul{
+    height: 60px;
+    margin-bottom: 32px;
 }
 header h1 {
   font-size: 24px;
@@ -64,6 +64,13 @@ section p img {
 section.second p {
   margin: 24px 16px;
 }
+
+section.second p img{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
 section.second p a {
   color: #aa5555;
   text-decoration: none;
@@ -84,7 +91,8 @@ footer li a {
   color: #cc9999;
   text-decoration: none;
 }
-@media (min-device-width: 481px) {
+
+@media (min-width: 481px) {
   body {
     font-size: 16px;
     width: 750px;
@@ -122,7 +130,7 @@ footer li a {
     clear: both;
   }
 }
-@media (min-device-width: 960px) {
+@media (min-width: 960px) {
   body {
     width: 960px;
   }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
 
     <meta charset="UTF-8"/>
     <title>Welcome to Arrow Photography</title>
-    <meta name="viewport" content="width: device;initial-scale=1" />
-    <link href="assets/css/styles.css" rel="stylesheet" />
+    <script src="assets/js/modernizr.custom.23575.js"></script>
+    <link href="assets/css/styles.css" rel="stylesheet" media="all"/>
 
 
 </head>
@@ -29,9 +29,15 @@
 </header>
     <div id="content">
     <section class="first">
-
-        <p>
-            <img src="assets/images/ArrowPhotograhyFrontPage2.jpg" alt="Main Photograph 2" />
+        <p class="cycle-slideshow"
+           data-cycle-fx="tileSlide"
+           data-cycle-tile-vertical="false"
+           data-cycle-tile-count="15">
+            <img src="assets/images/arrow photography/ArrowPhotograhyFrontPage2.jpg" alt="Main Photograph 1" />
+            <img src="assets/images/arrow photography/ArrowPhotograhyFrontPage1.jpg" alt="Main Photograph 2" />
+            <img src="assets/images/arrow photography/ArrowPhotograhyFrontPage3.jpg" alt="Main Photograph 3" />
+            <img src="assets/images/arrow photography/ArrowPhotograhyFrontPage4.jpg" alt="Main Photograph 4" />
+            <img src="assets/images/arrow photography/ArrowPhotograhyFrontPage5.jpg" alt="Main Photograph 5" />
         </p>
         <h2>Welcome to Arrow Photography, Affordable and Professional</h2>
         <p>
@@ -121,6 +127,13 @@
 
 
 </div>
-
+<script src="assets/js/min/jquery-1.11.0.min.js"></script>
+<script src="assets/js/cycle2/jquery.cycle2.min.js"></script>
+<script src="assets/js/cycle2/jquery.cycle2.tile.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.cycle-slideshow').cycle();
+    })
+</script>
 </body>
 </html>
